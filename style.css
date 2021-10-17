@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+
+
+.titree{
+	font-family: 'Birthstone', cursiv;
+	font-size: 24px;
+}
+
+body{
+	font-family: Verdana, Calibri, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+/*On utilise "<" pour ne cibler que la liste ul qui est un enfant directe nav*/
+
+nav > ul{
+	margin: 0px;
+	padding: 0px;
+}
+
+/*On enlève les puces devant tous les éléments li
+appartenant à notre élément nav*/
+
+nav li{
+	list-style-type: none;
+	
+}
+
+/*On affiche seulement les éléments li correspondant à
+nos onglets de menu en ligne (côte à côte)*/
+
+nav > ul >li {
+	float: left;
+}
+
+.submenu{
+	display: none;
+}
+
+/*On rend notre case à cocher invisible*/
+
+nav input [type=checkbox]{
+	display: none;
+}
+/*On cache le bouton affichant le menu mobile*/
+.menu-mobile{
+	display: none;
+}
+
+nav{
+	width: 100%;
+	background-color: #545558;
+}
+/*On affiche seulement les éléments li correspondant à
+nos onglets de menu en ligne (côte à côte)*/
+
+nav > ul >li{
+	float: left;
+	position: relative;
+}
+
+/*Un "hack" CSS (clearfix) très connnu*/
+nav > ul:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+nav a{
+	display: inline-block;
+	text-decoration: none;
+}
+nav > ul >li > a{
+	padding: 20px 30px;
+	color: #FFF;
+}
+nav li:hover .submenu{
+	display: inline-block;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	padding: 0px;
+	z-index: 100000;
+}
+
+.submenu li{
+	border-bottom: 1px solid #CCC;
+}
+
+.submenu li a{
+	padding: 15px 30px;
+	font-size: 13px;
+	color: #222538;
+	width: 270px;
+}
+.acceuilll:hover{
+	border-top: 5px solid #AEFF00;
+	background-color: rgba(255, 165, 0, 0.15);
+}
+.menu-html:hover{
+	border-top: 5px solid #e44d26;
+	background-color: RGBa(228, 77, 38, 0.15);
+}
+
+.menu-css:hover{
+	border-top: 5px solid #0070bb;
+	background-color: RGBa(000, 112, 192, 0.15);
+}
+
+.menu-js:hover{
+	border-top: 5px solid #f1dc4f;
+	background-color: RGBa(241, 211, 79, 0.15);
+}
+
+.menu-contact:hover{
+	border-top: 5px solid skyblue;
+	background-color: RGBa(220, 220 ,220, 0.15);
+}
+.TP6:hover{
+	border-top: 5px solid #04FF5F;
+	background-color: rgba(46, 165, 54, 0.15);
+}
+.menu-java:hover{
+	border-top: 5px solid #00FFFB;
+	background-color: rgba(0, 255, 251, 0.15);
+}
+
+nav > ul > li:hover a{
+	padding: 15px 30px 20px 30px; 
+}
+
+.acceuilll .submenu{
+	background-color: rgb(255, 165, 0,);
+}
+
+.menu-html .submenu{
+	background-color: RGB(230, 100, 40);
+}
+.menu-css .submenu{
+	background-color: rgb(000, 160, 240);
+}
+.menu-js .submenu{
+	background-color: rgb(251, 216, 99);
+}
+
+.menu-contact .submenu{
+	background-color:rgb(0, 102, 255);
+
+}
+.TP6 .submenu{
+	background-color:rgb(46, 168, 54);
+
+}
+
+.menu-java .submenu{
+	background-color: rgb(40, 177, 175);
+}
+.submenu li:hover a{
+	color: #eee;
+	font-weight: bold;
+}
+
+.menu-html .submenu li:hover{
+	background-color: rgb(210, 77, 60);
+}
+
+.menu-css ;submenu li:hover{
+	background-color: rgb(000, 115, 200);
+}
+
+.menu-js .submenu li:hover{
+	background-color: rgb(200, 165, 75);
+}
+
+.menu-contact .submenu li:hover{
+	background-color: rgb(0, 224, 255);
+}
+.TP6 .submenu li:hover{
+	background-color: rgb(46, 217, 54);
+
+}
+.menu-java .submenu li: hover{
+	background-color: rgb(75, 180, 178);
+}
+
+
+.menu-mobile{
+	display: none;
+}
+/*On rend notre case à cocher invisible*/
+
+nav input[type=checkbox]{
+	display: none;
+}
+
+/*Lorsque la case est cochée (dès qu'un utilisateur appuie sur 
+notre bouton), le menu entier s'affiche*/
+
+nav input[type=checkbox]:checked ~ ul{
+	display: block;
+}
+/*On modifie le style de notre menu pour son affichage responsive*/
+
+@media screen and (max-width : 680px){
+	.menu-mobile{
+		display: block;
+		color: #fff;
+		background-color: rgba(29, 197, 151, 0.97);
+		text-align: center;
+		padding: 12px 0;
+	}
+	nav ul{
+		display: none;
+	}
+
+	nav ul li, nav ul li a {
+		width: 100%;
+		text-align: center;
+	}
+	nav ul li a, nav ul li:hover a {
+		padding: 10px 0px 10px 0px;
+	}
+	nav li:hover .submenu{
+		display: block;
+		position: static;
+	}
+}
+/* CSS pour CV*/
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=PT+Sans+Narrow&display=swap');
+
+.page_cv{
+	width: 680px;
+	margin: auto;
+	font-size: 16px;
+	border: 5px solid #12363F;
+	border-radius: 5px ;
+	box-shadow: 2px 4px 3px #12363F;
+	height: auto;
+	padding: 1em;
+}
+.gras_cv{
+	  font-weight: bold;
+}
+.entete_cv{
+	margin: 0 0 200px 0;
+}
+.info_cv{
+	float: left;
+	width: auto;
+	height: 150px;
+
+}
+.photo_cv{
+		float: right;
+		width: 150px;
+		height: 150px;
+}
+.img_cv{
+  width: 100%;
+  height: auto;
+}
+.section_cv{
+	font-family: Tahoma ;
+	margin: 0 0 5% 0;
+}
+.titre_cv{
+	font-size: 48px;
+	color: darkblue;
+	width: 100%;
+	font-family: 'Birthstone', cursive;
+text-shadow: 7px 0px 10px #01e4ff;
+border-radius: 20px;
+border: 5px solid;
+border-image: url(ap.gif) 100 / 5px / 0px stretch;
+}
+.information1_cv{
+	width: 20%;
+	padding: 4px;
+	font-family: 'Birthstone', cursive;
+	font-size: 21px;
+
+}
+.information2_cv{
+	padding: 4px;
+	width: 73%;
+}
+.categorie_cv{
+	font-weight: bold;
+}
+
+.align_cv{
+		display: flex;
+	align-items: stretch;
+}
+
+
+
+
+
+
+
+.rectangle{
+	width: 100%;
+	height: 80px;
+border: 5px solid blue;
+
+}
+
+
+
+.debut{
+	width: 600px;
+	margin: auto;
+
+}
+
+https://www.youtube.com/
+https://www.youtube.com/
+
+
+.rectanglee{
+	width: 100%;
+	height: 80px;
+border: 5px solid blue;
+
+}
+.logo{
+	float: left;
+	font-size: 2px;
+}
